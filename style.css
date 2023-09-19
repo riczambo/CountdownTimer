@@ -79,6 +79,6 @@ h1 {
         transform: translateY(-40%);
     }
     100% {
-        transform: translateY(1900%);
+        transform: translateY(2000%);
     }
 }
