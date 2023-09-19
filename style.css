@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    margin: 0;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 4rem;
+    margin-top: 5rem;
+}
+
+.blurred-bg {
+    background-image: url("./christmas_bg.jpeg");
+    background-size: cover;
+    background-position: center center;
+    filter: blur(5px); /* Sfocatura applicata solo all'immagine di sfondo */
+    opacity: 0.6;
+    position: absolute; /* Posizionamento assoluto per sovrapporre al contenuto */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.countdown-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.big-text {
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 1rem 2rem;
+}
+
+.countdown-el {
+    text-align: center;
+}
+
+.countdown-el span {
+    font-size: 1.3rem;
+}
+
+/* Stile per i fiocchi di neve */
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.snowflake {
+    position: absolute;
+    font-size: 2rem;
+    color: #fff;
+    opacity: 0.8;
+    animation: falling 40s linear infinite;
+}
+
+@keyframes falling {
+    0% {
+        transform: translateY(-40%);
+    }
+    100% {
+        transform: translateY(1900%);
+    }
+}
